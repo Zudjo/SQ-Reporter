@@ -1,0 +1,20 @@
+1. Libraries and variables import
+
+2. Getting data from api in to local variables
+  - Total number of issues
+  - Every issue node of the project in question
+  - All analyses dates
+  - Ratings data
+
+3. Elaborate data
+  - Issues quantity descalation, calculated from list of issues,
+    comparing "closeDate" with analyses dates
+  - Issues attributes, counted from list of issues, to create bar graphs
+
+4. Formatting data for html
+  - Line chart for issues descalation
+  - Bar charts for issues attributes quantity
+
+5. Filling template with data
+
+6. Convert to pdf
