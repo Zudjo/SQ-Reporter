@@ -1,5 +1,7 @@
 # LIBRARIES
 # __________________________________________________
+import sys
+
 from libs.api_handler import *
 from libs.json_handler import * #
 from libs.files_handler import *
@@ -21,6 +23,12 @@ from data.info_dicts.hotspots import *
 # -------------------------
 # Getting data
 # -------------------------
+
+# If project_key argument is passed, set it
+try:
+    print(sys.argv[1])
+except Exception:
+    pass
 
 # Getting issues data
 issues_data = get_api_json("issues/search", issues_parameters)
@@ -74,7 +82,6 @@ ratings = compose_ratings(ratings_data["component"]["measures"], ratings_letters
 bar_issues_charts = compose_mltpl_bar_charts(issues_properties_quantity, issues_info)
 line_issues_chart = compose_line_chart("issues", "Analyses", "Quantity", issues_descending)
 
-
 # Formatting hotspots
 hotspots = compose_hotspots(hotspots_properties_quantity)
 
@@ -85,7 +92,6 @@ index = get_file_as_string(path_index)
 
 index = index.format(
     project_key=project_key,
-    badge_token=badge_token,
     line_issues_chart=line_issues_chart,
     bar_issues_charts=bar_issues_charts,
     ratings=ratings,

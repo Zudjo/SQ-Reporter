@@ -20,17 +20,17 @@
          setTimeout(function(){
 
            
-        draw_line_chart("issues_chart", "issues", "Analyses", "Quantity", [[1, 202, 202], [2, 173, 173]]);
+        draw_line_chart("issues_chart", "issues", "Analyses", "Quantity", [[1, 82, 82], [2, 22, 22], [3, 17, 17], [4, 17, 17], [5, 3, 3]]);
     
 
            
-        draw_bar_chart("severity_chart", "severity", [['INFO', 0, '#4287f5', 0],['MINOR', 0, '#b0d513', 0],['MAJOR', 0, '#DD6971', 0],['CRITICAL', 0, '#d02f3a', 0],['BLOCKER', 0, '#96222A', 0]]);
+        draw_bar_chart("severity_chart", "severity", [['INFO', 0, '#4287f5', 0],['MINOR', 0, '#b0d513', 0],['MAJOR', 2, '#DD6971', 2],['CRITICAL', 1, '#d02f3a', 1],['BLOCKER', 0, '#96222A', 0]]);
     
-        draw_bar_chart("type_chart", "type", [['CODE_SMELL', 0, '#4287f5', 0],['BUG', 0, '#DD6971', 0],['VULNERABILITY', 0, '#96222A', 0]]);
+        draw_bar_chart("type_chart", "type", [['CODE_SMELL', 2, '#4287f5', 2],['BUG', 1, '#DD6971', 1],['VULNERABILITY', 0, '#96222A', 0]]);
     
-        draw_bar_chart("status_chart", "status", [['OPEN', 0, '#4287f5', 0],['CONFIRMED', 0, '#2A77F4', 0],['REOPENED', 0, '#0C61E9', 0],['RESOLVED', 29, '#0A51C2', 29],['CLOSED', 184, '#08409B', 184]]);
+        draw_bar_chart("status_chart", "status", [['OPEN', 3, '#4287f5', 3],['CONFIRMED', 0, '#2A77F4', 0],['REOPENED', 0, '#0C61E9', 0],['RESOLVED', 14, '#0A51C2', 14],['CLOSED', 65, '#08409B', 65]]);
     
-        draw_bar_chart("resolution_chart", "resolution", [['FALSE-POSITIVE', 14, '#4287f5', 14],['WONTFIX', 15, '#2A77F4', 15],['FIXED', 184, '#0C61E9', 184],['REMOVED', 0, '#0A51C2', 0]]);
+        draw_bar_chart("resolution_chart", "resolution", [['FALSE-POSITIVE', 5, '#4287f5', 5],['WONTFIX', 9, '#2A77F4', 9],['FIXED', 65, '#0C61E9', 65],['REMOVED', 0, '#0A51C2', 0]]);
     
 
 
@@ -47,12 +47,9 @@
 
       <div class="title">
         <h1>SonarQube report</h1>
-        <h2>Project: <span>BKT-BIKE</span></h2>
+        <h2>Project: <span>BOM-TEST</span></h2>
       </div>
 
-      <div class="badges">
-        <img src="http://localhost:9000/api/project_badges/quality_gate?project=BKT-BIKE&token=squ_01a6c5bb15c06b1b4ba2b24122a8511256ca3686" alt="">
-      </div>
     </div>
 
     <div class="body">
@@ -67,18 +64,9 @@
                 
 
             <tr>
-                <td class="rating-name">Security Review</td>
+                <td class="rating-name">Security</td>
                 <td><span class="rating rating-A">A</span></td>
-                <td class="rating-criterion">Reviewed Security Hotspots:</td>
-                <td class="rating-criterion">>= 80%</td>
-            </tr>
-
-        
-
-            <tr>
-                <td class="rating-name">Reliability</td>
-                <td><span class="rating rating-A">A</span></td>
-                <td class="rating-criterion">Bug:</td>
+                <td class="rating-criterion">Vulnerabilities:</td>
                 <td class="rating-criterion">0</td>
             </tr>
 
@@ -94,10 +82,19 @@
         
 
             <tr>
-                <td class="rating-name">Security</td>
-                <td><span class="rating rating-A">A</span></td>
-                <td class="rating-criterion">Vulnerabilities:</td>
-                <td class="rating-criterion">0</td>
+                <td class="rating-name">Reliability</td>
+                <td><span class="rating rating-C">C</span></td>
+                <td class="rating-criterion">Bug:</td>
+                <td class="rating-criterion">at least 1 major</td>
+            </tr>
+
+        
+
+            <tr>
+                <td class="rating-name">Security Review</td>
+                <td><span class="rating rating-E">E</span></td>
+                <td class="rating-criterion">Reviewed Security Hotspots:</td>
+                <td class="rating-criterion">< 30%</td>
             </tr>
 
         
@@ -115,7 +112,7 @@
         </tr>
         <tr>
             <th>Safe</th>
-            <td>13</td>
+            <td>0</td>
         </tr>
         <tr>
             <th>Acknowledged</th>
@@ -123,7 +120,7 @@
         </tr>
         <tr>
             <th>To review</th>
-            <td>0</td>
+            <td>5</td>
         </tr>
         
               </tbody>

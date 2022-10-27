@@ -39,9 +39,9 @@ def get_file_as_string(file_name):
     return file.read()
 
 def convert_to_pdf(file_name, path_output):
-    print("Converting to PDF...")
+    print("Creating PDF...")
     pdfkit.from_file(file_name, path_output + "/output.pdf", options=options)
-    print("\nConversion completed.")
+    print("\noutput.pdf created.")
 
 def delete_file(file_name):
     if os.path.exists(file_name):

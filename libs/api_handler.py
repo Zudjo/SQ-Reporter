@@ -7,11 +7,11 @@ import json
 # --------------------------------------------------
 
 # user_token for authentication to the api
-#auth = ('squ_9087310406db8aa1fef74eeace5f181271adef54', '') # g.ziu's
-#url_base = "https://sonarqube.websolute.it/api/"
+auth = ('squ_9087310406db8aa1fef74eeace5f181271adef54', '') # g.ziu's
+url_base = "https://sonarqube.websolute.it/api/"
 
-auth = ('squ_b02ff45095516d7d8652dbbb03903fbd53b369ed', '') # localhost
-url_base = "http://localhost:9000/api/"
+# auth = ('squ_b02ff45095516d7d8652dbbb03903fbd53b369ed', '') # localhost
+# url_base = "http://localhost:9000/api/"
 
 
 # FUNCTIONS
