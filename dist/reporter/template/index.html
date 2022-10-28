@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="./css/fonts.css">
+      <link rel="stylesheet" href="./css/main.css">
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <title>Project Report</title>
+   </head>
+
+   <body onload="init()">
+
+     <script src="./js/charts/chart_line.js"></script>
+     <script src="./js/charts/chart_bar.js"></script>
+
+     <script type="text/javascript">
+       function init() {{
+         google.charts.load('44',{{packages:['corechart']}});
+         setTimeout(function(){{
+
+           {line_issues_chart}
+
+           {bar_issues_charts}
+
+
+         }}, 1000);
+       }}
+
+     </script>
+
+    <div class="header">
+      <picture>
+         <source srcset="./images/logo_websolute.webp" type="image/webp">
+         <img id="logo" src="./images/logo_websolute.png" type="image/png">
+      </picture>
+
+      <div class="title">
+        <h1>SonarQube report</h1>
+        <h2>Project: <span>{project_key}</span></h2>
+      </div>
+
+    </div>
+
+    <div class="body">
+      <table>
+        <tr>
+
+          <td class="data">
+            <table class="ratings">
+              <caption>Ratings</caption>
+
+              <tbody>
+                {ratings}
+              </tbody>
+            </table>
+
+            <table class="hotspots">
+              <caption>Security Hotspots</caption>
+
+              <tbody>
+                  {hotspots}
+              </tbody>
+            </table>
+          </td>
+
+          <td class="charts">
+            <table>
+              <caption>Charts</caption>
+
+              <tbody>
+                <tr><td><h6>Issues quantity history</h6></td></tr>
+                <tr><td><div class="chart" id="issues_chart"></div></td></tr>
+                <tr><td><h6>Quantities for each group of issues</h6></td></tr>
+                <tr><td><div class="chart" id="type_chart"></div></td></tr>
+                <tr><td><div class="chart" id="status_chart"></div></td></tr>
+                <tr><td><div class="chart" id="resolution_chart"></div></td></tr>
+                <tr><td><div class="chart" id="severity_chart"></div></td></tr>
+              </tbody>
+            </table>
+          </td>
+
+
+        </tr>
+      </table>
+    </div>
+   </body>
+</html>

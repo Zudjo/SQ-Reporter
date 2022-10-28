@@ -24,12 +24,6 @@ from data.info_dicts.hotspots import *
 # Getting data
 # -------------------------
 
-# If project_key argument is passed, set it
-try:
-    print(sys.argv[1])
-except Exception:
-    pass
-
 # Getting issues data
 issues_data = get_api_json("issues/search", issues_parameters)
 issues_total = get_node(issues_data, "total")
@@ -103,3 +97,5 @@ index = index.format(
 # -------------------------
 write_file(path_temp_index, index, True)
 convert_to_pdf(path_temp_index, path_output)
+
+input("\nExecution completed, press anything to close...")

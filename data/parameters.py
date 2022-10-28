@@ -1,4 +1,12 @@
-project_key = "BOM-TEST"
+print("1. Define project key")
+print("2. Use default project key (recommended)\n")
+choice = input("Choice: ")
+
+if choice == "1":
+    project_key = input("Insert project key: ")
+else:
+    project_key = "BOM-TEST" # default
+
 issues_parameters = {"componentKeys": project_key, "s": "SEVERITY", "ps": "500"}
 analyses_parameters = {"project": project_key}
 ratings_parameters = {"component": project_key, "metricKeys": "sqale_rating, reliability_rating, security_rating, security_review_rating"}
