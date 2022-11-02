@@ -1,9 +1,7 @@
 # LIBRARIES
 # __________________________________________________
-import sys
-
 from libs.api_handler import *
-from libs.json_handler import * #
+from libs.json_handler import *
 from libs.files_handler import *
 from libs.html_handler import *
 from libs.calculator import *
@@ -97,5 +95,6 @@ index = index.format(
 # -------------------------
 write_file(path_temp_index, index, True)
 convert_to_pdf(path_temp_index, path_output)
+delete_file(path_temp_index)
 
 input("\nExecution completed, press anything to close...")
